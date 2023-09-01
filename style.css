@@ -99,6 +99,7 @@ nav ul li a:hover::after {
 #about img {
   float: left;
   position: relative;
+  margin-right: 5px;
 }
 #about p {
   word-spacing: 20px;
