@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+           *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #3498db;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+        }
+        input::placeholder{
+            font-size: 20px;
+        }
+
+        .hidden{
+            position: relative;
+            height: 50px;
+        }
+        .input{
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            transition: width 0.3s ease;
+            font-size: 20px;
+        }
+        .btn{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:0;
+            left: 0;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+        input:focus,
+        .btn:focus{
+            outline: 0;
+        }
+        .hidden.active .input{
+            width: 200px;
+        }
+        .hidden.active .btn{
+            transform: translateX(198px);
+        }
+        h1{
+            position:absolute;
+            top: 180px;
+            align-items: center;
+            text-align: center;
+            font-size: 40px;
+            color:greenyellow ;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Click to See the Magic</h1>
+    <div class="hidden active">
+        <input type="text" name="text" class="input" placeholder="Search Here..">
+        <button class="btn">
+        <i class="fa-solid fa-magnifying-glass  "></i>
+        </button>
+    </div>
+</body>
+<script>
+    const hidden = document.querySelector('.hidden')
+    const input = document.querySelector('.input')
+    const btn = document.querySelector('.btn')
+
+    btn.addEventListener('click',() =>{
+          hidden.classList.toggle('active')
+    })
+     
+    
+
+</script>
+</html>

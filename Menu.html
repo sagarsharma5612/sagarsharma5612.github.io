@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-image:linear-gradient(
+            to bottom,
+            #eafbff 0%,
+            #eafbff 50%,
+            #5290f9 50%,
+            #5290f9 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    nav{
+        width: 80px;
+        display:flex;
+    }
+    nav{
+        background-color: #fff;
+        width:400px;
+        position: relative;
+        width: 80px;
+        padding: 20px;
+        display: flex;
+        transition: width 0.6s linear;
+        border-radius: 3px;
+    }
+    nav.active{
+        width: 400px;
+    }
+    nav ul{
+        display: flex;
+        width: 0;
+        margin: 0;
+        padding: 0;
+        transition: width 0.6s linear;
+    }
+    nav.active ul{
+        width: 100%;
+    }
+    nav ul li{
+        list-style-type: none;
+        transform: rotateY(0deg);
+        opacity: 0;
+        transition: transform 0.6s linear, opacity 0.6 linear;
+    }
+    nav.active ul li{
+        transform: rotateY(360deg);
+        opacity: 1;
+        transition: transform 0.6s linear;
+    }
+    nav ul a{
+        margin: 20px;
+        text-decoration: none;
+        position: relative;
+    }
+    i{
+        position: absolute;
+        right: 20px;
+        top: 18px;
+        cursor: pointer;
+    }
+    .line{
+        background-color: #5290f9;
+        position: absolute;
+    }
+    .icon{
+        background-color: #f7f7f7;
+        border: none;
+        cursor: pointer;
+        height: 30px;
+        width: 20px;
+        position: relative;
+        right: 20px;
+        bottom: 5px;
+    }
+    .icon:focus{
+        outline:none;
+    }
+    .icon .line{
+        background-color:#5290f9;
+        height: 2px;
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        transition:transform 0.6s ease;
+    }
+    .icon .line2{
+        background-color:#5290f9;
+        top: auto;
+        bottom: auto;
+    }
+    nav.active .icon .line1{
+        transform: rotate(-765deg) translateY(5.5px);
+    }
+    nav.active .icon .line2{
+        transform: rotate(765deg) translateY(-5.5px);
+    }
+</style>
+<body>
+    <nav class="active" id="nav">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Skills</a></li>
+        </ul>
+
+            <button class="icon" id="toggle">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+            </button>
+    </nav>
+</body>
+<script>
+    const toggle = document.getElementById('toggle')
+    const nav = document.getElementById('nav')
+    
+    toggle.addEventListener('click',()=>{
+        nav.classList.toggle('active')
+    })
+
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            text-align:center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 700px;
+            max-width: 600px;
+        }
+        .square{
+            box-shadow: 0 0 2px #000;
+            background-color: #1d1d1d;
+            width: 10px;
+            height: 10px;
+            margin: 2px;
+            transition:2s ease;
+        }
+        .square:hover{
+            transition-duration: 0s;
+        }
+        #container{
+            width:100vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        </div>
+</body>
+<script>
+    const container = document.getElementById('container')
+
+    const colors =['#e74c3c',,'#8e44ad','#3498db','#e67e22','#2ecc71']
+
+    var SQUARES =1597
+
+    for(i=1;i<SQUARES;i++){
+
+    const square = document.createElement('div')
+
+    square.classList.add('square')
+
+    square.addEventListener('mouseover',() => setcolor(square))
+
+    square.addEventListener('mouseout',() => removecolor(square))
+
+    container.appendChild(square)
+
+    function setcolor(element){
+        const color = getRandomColor()
+        element.style.background = color
+    }
+
+    function removecolor(element){
+        element.style.background = '#1d1d1d'
+        element.style.boxShadow = `0 0 2px ${colors}, 0 0 10px ${colors}`
+    }
+
+    function getRandomColor(){
+        return colors[Math.floor(Math.random() * colors.length)]
+    }
+
+
+}
+</script>
+</html>

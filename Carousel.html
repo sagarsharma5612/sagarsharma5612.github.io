@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel images</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .carousel {
+            width: 800px;
+            height: 550px;
+            box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .img {
+            width: 800px;
+            height: 500px;
+            display: flex;
+            transform: translateX(0px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img {
+            width: 800px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .btn{
+            background-color: #3498db;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            width: 49.5%;
+            position: relative;
+            top: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+        @media  (max-width:480px) {
+            .carousel{
+                width:100vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="img" id="carousel">
+            <img src="https://cdn.wallpapersafari.com/61/19/7J93br.jpg" alt="">
+
+
+            <img src="https://cdn.wallpapersafari.com/48/18/i5r7dS.jpg" alt="">
+
+            <img src="https://wallpaper.dog/large/10911115.jpg" alt="">
+
+            <img src="https://e1.pxfuel.com/desktop-wallpaper/305/532/desktop-wallpaper-2560%C3%971440-nature-10259-2560x1440.jpg"
+                alt="">
+
+            <img src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" alt="">
+
+            <img src="https://t3.ftcdn.net/jpg/05/35/47/38/360_F_535473874_OWCa2ohzXXNZgqnlzF9QETsnbrSO9pFS.jpg" alt="">
+        </div>
+        <div id="btn">
+            <button class="btn" id="prev">Prev</button>
+            <button class="btn" id="next">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+    const img = document.querySelector('.img')
+    const prev = document.getElementById('prev')
+    const next = document.getElementById('next')
+
+    const imgs = document.querySelectorAll('.img img')
+
+    let idx = 0
+
+    let interval = setInterval(run, 2000)
+
+    run()
+
+    function run() {
+        idx++
+        changeimage()
+    }
+
+    function changeimage() {
+        if (idx > imgs.length - 1) {
+            idx = 0
+        } else if (idx < 0) {
+            idx = imgs.length - 1
+        }
+
+        img.style.transform = `translateX(${-idx * 800}px)`
+    }
+
+    function resetInterval(){
+        clearInterval(interval)
+        interval = setInterval(run, 2000)
+    }
+
+
+    next.addEventListener('click',() =>{
+        idx++
+        changeimage()
+        resetInterval()
+    })
+    prev.addEventListener('click',() =>{
+        idx--
+        changeimage()
+        resetInterval()
+    })
+</script>
+
+</html>
