@@ -241,7 +241,8 @@ textarea{
   color: #34b7db;
 }
 .contactinfo a i{
-  margin: 20px 10px;
+  margin:10px;
+  margin-left: 3px;
 }
 
 .form input:focus {
@@ -283,7 +284,7 @@ textarea{
 }
 .copy {
   position: relative;
-  top: 70%;
+  top: 73%;
   text-align: center;
 }
 nav .fas {
@@ -403,12 +404,13 @@ nav .fas {
   }
 
   .service {
-    width: 290px;
+    width: 300px;
     height: 500px;
     margin-left: 10px;
     margin-right: 10px;
     float: right;
   }
+
   #contact {
     margin-left: 0;
     height: 800px;
