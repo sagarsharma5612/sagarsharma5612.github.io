@@ -85,9 +85,10 @@
 </body>
 <script>
     const panels = document.querySelectorAll('.panel')
-
+    console.log('panels :>> ', panels);
     panels.forEach(panel =>{
         panel.addEventListener('click',() =>{
+          
             removeActiveclass()
             panel.classList.add('active')
         })
