@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel images</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body {
             display: flex;
             align-items: center;
@@ -56,9 +60,23 @@
         .btn:hover {
             opacity: 0.9;
         }
-        @media  (max-width:480px) {
+        
+        @media screen and (max-width:650px) {
             .carousel{
-                width:100vw;
+                height: 400px;
+                box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.2);   
+            }
+            .img{
+                height: 350px;
+            }
+            #btn{
+                display: flex;
+                justify-content: space-between;
+            }
+            .btn{
+                width: 160px;
+                margin-left: 5px;
+                margin-right: 5px;
             }
         }
     </style>
