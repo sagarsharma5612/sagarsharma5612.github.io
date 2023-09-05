@@ -98,14 +98,20 @@ nav ul li a:hover::after {
   font-size: 60px;
 }
 #about img {
-  float: left;
   position: relative;
-  margin-right: 6px;
+  left: 5px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 50px;
 }
 #about p {
   word-spacing: 20px;
   line-height: 30px;
-  padding: 20px 20px;
+  padding: 30px 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-style: italic;
+
 }
 #skill {
   margin-top: 80px;
@@ -299,6 +305,8 @@ nav .fas {
 .web {
   color: #fff;
 }
+
+/* Media Quiries Js ---- */
 @media only screen and (max-width: 650px) {
   * {
     box-sizing: border-box;
@@ -340,7 +348,7 @@ nav .fas {
   }
   .para .about {
     top: -30px;
-  }
+  }z
   nav {
     width: 100%;
   }
