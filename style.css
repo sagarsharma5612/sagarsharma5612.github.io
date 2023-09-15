@@ -1,443 +1,444 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  background-color: #3498db;
-  width: 100%;
-  height: 80px;
-  transition: 1s ease;
-  z-index: 100;
-}
-.nav.active {
-  background-color: #fff;
-  transition: 1s ease;
-}
-nav img {
-  margin-left: 30px;
-  width: 150px;
-  cursor: pointer;
-  left: 0;
-  margin-left: 0;
-}
-nav ul {
-  display: flex;
-}
-nav ul li {
-  list-style: none;
-  margin: 20px;
-  font-size: 23px;
-  font-weight: 600;
-}
-nav ul li a {
-  color: black;
-  text-decoration: none;
-  position: relative;
-}
-nav ul li a:hover {
-  color: #dd1047;
-}
-nav ul li a::after {
-  content: "";
-  background-color: #ff004f;
-  width: 0;
-  height: 3px;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s ease;
-}
-nav ul li a:hover::after {
-  width: 100%;
-}
-#header {
-  background: url("https://www.konverso.ai/hubfs/_NEW/hero-clients.jpg");
-  width: 100%;
-  height: 600px;
-  background-repeat: no-repeat;
-  background-position: cover;
-}
-.para {
-  position: relative;
-  top: 80%;
-  float: right;
-  right: 100px;
-  color: #fff;
-}
-.para h1 {
-  font-size: 40px;
-}
-.para h4.about {
-  position: absolute;
-  left: 150px;
-}
-.para .typing {
-  font-size: 40px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-top: 20px;
-}
-::placeholder{
-  font-size:15px;
-}
-#message{
-  text-transform: uppercase;
-}
-.para .typed {
-  color: red;
-  font-weight: 700;
-}
-#about h1 {
-  text-align: center;
-  text-decoration: underline;
-  margin: 30px 30px;
-  font-size: 60px;
-}
-#about img {
-  position: relative;
-  left: 5px;
-  float: left;
-  border-radius: 10px;
-  margin-right: 50px;
-}
-#about p {
-  word-spacing: 20px;
-  line-height: 30px;
-  padding: 30px 30px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  font-style: italic;
-
-}
-#skill {
-  margin-top: 80px;
-  width: 100%;
-  cursor: pointer;
-}
-.skills {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
-  margin: 50px 50px;
-  text-decoration: underline;
-}
-.skill {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-left: 10px;
-  margin-right: 10px;
-  justify-content: space-evenly;
-}
-span {
-  color: rgb(42, 158, 164);
-}
-.box {
-  display: flex;
-  width: 300px;
-  height: 200px;
-  border: 1px solid black;
-  background-color: #34b7db;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  border-radius: 10px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 800;
-  box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.3);
-  transition: 0.3s ease;
-}
-.box:hover {
-  transform: scale(0.98);
-}
-#services {
-  background-color: #000;
-  width: 100%;
-  cursor: pointer;
-}
-#services h1 {
-  color: #fff;
-  font-size: 50px;
-}
-.service {
-  width: 400px;
-  color: #fff;
-}
-.serv {
-  display: flex;
-  margin: 30px;
-  padding: 30px;
-}
-.service {
-  margin: 20px;
-}
-.service h2 {
-  font-size: 40px;
-  margin-bottom: 30px;
-  font-weight: 800;
-}
-.service button {
-  background-color: #3498db;
-  border: none;
-  width: 100px;
-  height: 40px;
-  margin-top: 10px;
-}
-.service button a {
-  color: #fff;
-  text-decoration: none;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-#services .service {
-  background-color: #262626;
-  padding: 40px;
-}
-#services .service:hover {
-  background-color: #ff0044;
-  transition: 0.3s ease;
-  transform: translateY(-5px);
-}
-#contact {
-  background-color: #262626;
-  width: 100%;
-  height: 500px;
-  color: #fff;
-}
-.header {
-  display: flex;
-  color: #fff;
-  position: relative;
-}
-.cont-me {
-  position: relative;
-  top: 30%;
-  margin-left: 200px;
-}
-.form {
-  position: absolute;
-  right: 50px;
-}
-input{
-  border: 1px solid black;
-  padding: 20px;
-  margin-left: 10px;
-}
-textarea{
-  padding: 20px;
-  margin-left: 10px;
-  width: 85%;
-}
-#contact {
-  width: 100%;
-  height: 620px;
-  position: relative;
-}
-#contact input {
-  width: 300px;
-  height: 30px;
-}
-#contact h1 {
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  text-decoration: underline;
-  color: #34b7db;
-}
-.contactinfo a i{
-  margin:10px;
-  margin-left: 3px;
-}
-
-.form input:focus {
-  outline: none;
-}
-.form textarea:focus {
-  outline: none;
-}
-.form h1{
-  margin-left: 10px;
-}
-#Submit {
-  background-color: #3498db;
-  font-size: 15px;
-  margin-top: 20px;
-  text-align: center;
-  border-radius: 10px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-#phone{
-  -moz-appearance: textfield;
-}
-.form #Submit:active {
-  transform: scale(0.98);
-}
-.form{
-  background-color: #fff;
-  position: absolute;
-  top: 20px;
-  height: 520px;
-  margin-top: 30px;
-}
-.center i {
-  color: #3498db;
-  font-size: 20px;
-  margin: 5px;
-}
-.copy {
-  position: relative;
-  top: 73%;
-  text-align: center;
-}
-nav .fas {
-  display: none;
-}
-#services h2{
-  margin-left: 0px;
-}
-.web {
-  color: #fff;
-}
-
-/* Media Quiries Js ---- */
-@media only screen and (max-width: 650px) {
-  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  nav .fas:hover{
-    border: 2px solid blue;
+    scroll-behavior: smooth;
   }
   nav {
-    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #3498db;
+    width: 100%;
+    height: 80px;
+    transition: 1s ease;
+    z-index: 100;
+  }
+  .nav.active {
+    background-color: #fff;
+    transition: 1s ease;
+  }
+  nav img {
+    margin-left: 30px;
+    width: 150px;
+    cursor: pointer;
+    left: 0;
+    margin-left: 0;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    list-style: none;
+    margin: 20px;
+    font-size: 23px;
+    font-weight: 600;
+  }
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+  }
+  nav ul li a:hover {
+    color: #dd1047;
+  }
+  nav ul li a::after {
+    content: "";
+    background-color: #ff004f;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s ease;
+  }
+  nav ul li a:hover::after {
     width: 100%;
   }
   #header {
-    background: url("sagar.jpg");
-  }
-  nav img {
-    margin: 0;
-  }
-  #about {
+    background: url("https://www.konverso.ai/hubfs/_NEW/hero-clients.jpg");
     width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: cover;
   }
   .para {
-    margin-top: 60px;
-  }
-  #skill {
-    width: 100%;
-  }
-  .web {
+    position: relative;
+    top: 80%;
+    float: right;
+    right: 100px;
     color: #fff;
-    margin-left: 40px;
   }
   .para h1 {
-    position: relative;
-    left: 108px;
-    bottom: 100px;
-    width: 300px;
-    font-size: 30px;
+    font-size: 40px;
   }
-  .para .about {
-    top: -30px;
-  }z
-  nav {
-    width: 100%;
+  .para h4.about {
+    position: absolute;
+    left: 150px;
   }
   .para .typing {
-    margin-left: 110px;
-    position: relative;
-    font-size: 50px;
-    bottom: 100px;
-    font-size: 30px;
+    font-size: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
   }
-  nav .fas {
-    display: block;
-    font-size: 25px;
+  ::placeholder{
+    font-size:15px;
   }
-  nav ul {
-    position: fixed;
-    display: inline-block;
-    top: 0;
-    right:-200px;
-    width: 150px;
-    height: 100vh;
-    background-color: cadetblue;
-    z-index: 1;
-    transition: right 0.7s ease;
+  #message{
+    text-transform: uppercase;
   }
-  nav ul li {
-    display: block;
-    margin: 30px;
+  .para .typed {
+    color: red;
+    font-weight: 700;
   }
-  nav .fas {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  nav ul li {
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-  .box {
-    width: 100%;
-    flex-basis: 100%;
-  }
-  #about {
-    width: 100%;
+  #about h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 30px 30px;
+    font-size: 60px;
   }
   #about img {
+    position: relative;
+    left: 5px;
+    float: left;
+    border-radius: 10px;
+    margin-right: 50px;
+  }
+  #about p {
+    word-spacing: 20px;
+    line-height: 30px;
+    padding: 30px 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-style: italic;
+  
+  }
+  #skill {
+    margin-top: 80px;
     width: 100%;
+    cursor: pointer;
+  }
+  .skills {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin: 50px 50px;
+    text-decoration: underline;
+  }
+  .skill {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-left: 10px;
-    margin: 0;
-    margin-left: 0;
+    margin-right: 10px;
+    justify-content: space-evenly;
+  }
+  span {
+    color: rgb(42, 158, 164);
+  }
+  .box {
+    display: flex;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: #34b7db;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-weight: 800;
+    box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+  }
+  .box:hover {
+    transform: scale(0.98);
   }
   #services {
-    margin-left: 0;
-    margin-right: 10px;
+    background-color: #000;
+    width: 100%;
+    cursor: pointer;
+  }
+  #services h1 {
+    color: #fff;
+    font-size: 50px;
+  }
+  .service {
+    width: 400px;
+    color: #fff;
   }
   .serv {
     display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin: 0;
-    padding: 0;
+    margin: 30px;
+    padding: 30px;
   }
-
   .service {
-    width: 300px;
-    height: 500px;
-    margin-left: 10px;
-    margin-right: 10px;
-    float: right;
+    margin: 20px;
   }
-
+  .service h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 800;
+  }
+  .service button {
+    background-color: #3498db;
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .service button a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  #services .service {
+    background-color: #262626;
+    padding: 40px;
+  }
+  #services .service:hover {
+    background-color: #ff0044;
+    transition: 0.3s ease;
+    transform: translateY(-5px);
+  }
   #contact {
-    margin-left: 0;
-    height: 800px;
+    background-color: #262626;
+    width: 100%;
+    height: 500px;
+    color: #fff;
   }
-  .contactinfo {
+  .header {
+    display: flex;
+    color: #fff;
     position: relative;
-    margin-left: -190px;
-    bottom: 200px;
+  }
+  .cont-me {
+    position: relative;
+    top: 30%;
+    margin-left: 200px;
   }
   .form {
-    margin-top: 200px;
-    right: 10px;
+    position: absolute;
+    right: 50px;
   }
-  .copy #copy {
+  input{
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: 10px;
+  }
+  textarea{
+    padding: 20px;
+    margin-left: 10px;
+    width: 85%;
+  }
+  #contact {
+    width: 100%;
+    height: 620px;
     position: relative;
-    bottom: -30px;
   }
-}
+  #contact input {
+    width: 300px;
+    height: 30px;
+  }
+  #contact h1 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #34b7db;
+  }
+  .contactinfo a i{
+    margin:10px;
+    margin-left: 3px;
+  }
+  
+  .form input:focus {
+    outline: none;
+  }
+  .form textarea:focus {
+    outline: none;
+  }
+  .form h1{
+    margin-left: 10px;
+  }
+  #Submit {
+    background-color: #3498db;
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  #phone{
+    -moz-appearance: textfield;
+  }
+  .form #Submit:active {
+    transform: scale(0.98);
+  }
+  .form{
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    height: 520px;
+    margin-top: 30px;
+  }
+  .center i {
+    color: #3498db;
+    font-size: 20px;
+    margin: 5px;
+  }
+  .copy {
+    position: relative;
+    top: 73%;
+    text-align: center;
+  }
+  nav .fas {
+    display: none;
+  }
+  #services h2{
+    margin-left: 0px;
+  }
+  .web {
+    color: #fff;
+  }
+  
+  /* Media Quiries Js ---- */
+  @media only screen and (max-width: 650px) {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    nav .fas:hover{
+      border: 2px solid blue;
+    }
+    nav {
+      margin: 0;
+      width: 100%;
+    }
+    #header {
+      background: url("sagar.jpg");
+    }
+    nav img {
+      margin: 0;
+    }
+    #about {
+      width: 100%;
+    }
+    .para {
+      margin-top: 60px;
+    }
+    #skill {
+      width: 100%;
+    }
+    .web {
+      color: #fff;
+      margin-left: 40px;
+    }
+    .para h1 {
+      position: relative;
+      left: 108px;
+      bottom: 100px;
+      width: 300px;
+      font-size: 30px;
+    }
+    .para .about {
+      top: -30px;
+    }z
+    nav {
+      width: 100%;
+    }
+    .para .typing {
+      margin-left: 110px;
+      position: relative;
+      font-size: 50px;
+      bottom: 100px;
+      font-size: 30px;
+    }
+    nav .fas {
+      display: block;
+      font-size: 25px;
+    }
+    nav ul {
+      position: fixed;
+      display: inline-block;
+      top: 0;
+      right:-200px;
+      width: 150px;
+      height: 100vh;
+      background-color: cadetblue;
+      z-index: 1;
+      transition: right 0.7s ease;
+    }
+    nav ul li {
+      display: block;
+      margin: 30px;
+    }
+    nav .fas {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    nav ul li {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    .box {
+      width: 100%;
+      flex-basis: 100%;
+    }
+    #about {
+      width: 100%;
+    }
+    #about img {
+      width: 100%;
+      margin-left: 10px;
+      margin: 0;
+      margin-left: 0;
+    }
+    #services {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    .serv {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .service {
+      width: 300px;
+      height: 500px;
+      margin-left: 10px;
+      margin-right: 10px;
+      float: right;
+    }
+  
+    #contact {
+      margin-left: 0;
+      height: 800px;
+    }
+    .contactinfo {
+      position: relative;
+      margin-left: -190px;
+      bottom: 200px;
+    }
+    .form {
+      margin-top: 200px;
+      right: 10px;
+    }
+    .copy #copy {
+      position: relative;
+      bottom: -30px;
+    }
+  }
+  
