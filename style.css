@@ -135,8 +135,50 @@
     margin-right: 10px;
     justify-content: space-evenly;
   }
+  #check{
+    display: none;
+  }
+  .content{
+    display: none;
+  }
+  #check:checked ~ .content{
+    display: block;
+  }
+  button{
+    margin-top: 40px;
+    background-color: #3498db;
+    color: #fff;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  label{
+    cursor: pointer;
+  }
+  #check1{
+    display: none;
+  }
+  .content1{
+    display: none;
+  }
+  #check1:checked ~ .content1{
+    display: block;
+  }
+  #check2{
+    display: none;
+  }
+  .content2{
+    display: none;
+  }
+  #check2:checked ~ .content2{
+    display: block;
+  }
   span {
     color: rgb(42, 158, 164);
+  }
+  button label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   .box {
     display: flex;
